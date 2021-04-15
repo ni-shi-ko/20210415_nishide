@@ -8,5 +8,20 @@
 </template>
 
 <script>
-  
+import axios from "axios";
+  export default {
+    data() {
+      return {
+        zipcode:"",
+        address:""
+      }
+    },
+    methods: {
+      async searchAddress() {
+        const item = await axios.get(
+          `https://apis.postcode-jp.com/api/v4`
+        )
+    }
+   }
+  }
 </script>
