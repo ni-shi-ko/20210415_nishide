@@ -19,10 +19,11 @@ import axios from "axios";
     methods: {
       async getAddress() {
         const item = await axios.get(
-         `https://apis.postcode-jp.com/api/v4/postcodes/string?=${this.address}/nT5ps9J9PuqhczFKUcBP9ODlYd9HfbVbEtOhaHx`
+         `https://apis.postcode-jp.com/api/v4/postcodes?postcode=${this.address}&nT5ps9J9PuqhczFKUcBP9ODlYd9HfbVbEtOhaHx`
         );
-        console.log(item);
-    }
+        const addressData = item.data;
+        this.address = addressData.address
+     }
    }
   }
 </script>
