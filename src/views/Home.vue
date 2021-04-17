@@ -19,10 +19,9 @@ import axios from "axios";
     methods: {
       async getAddress() {
         const item = await axios.get(
-         `https://apis.postcode-jp.com/api/v4/postcodes?postcode=${this.address}&nT5ps9J9PuqhczFKUcBP9ODlYd9HfbVbEtOhaHx`
+         `https://apis.postcode-jp.com/api/v4/postcodes/postcode?apiKey&nT5ps9J9PuqhczFKUcBP9ODlYd9HfbVbEtOhaHx`
         );
-        const addressData = item.data;
-        this.address = addressData.address
+        console.log(item);
      }
    }
   }
